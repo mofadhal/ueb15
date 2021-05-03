@@ -5,17 +5,24 @@
  * @version (01.05.2021)
  */
 public class PalindromIterativ implements Palindrom
-{  //lotto
+{  
+
+    /**
+     * 
+     * @param wort Das eingegebe Wort .
+     * @return true , wenn das eingegebene Wort palindrom ist .
+     *         false , wenn das eingegebene Wort nicht palindrom ist . 
+     */
     public boolean istPalindrom(String wort){
     
         
-        int i = 0, j = wort.length() - 1;
-        while (i < j) {
-            if (wort.charAt(i) != wort.charAt(j))
+        int vorne = 0, hinten = wort.length() - 1;
+        while (vorne < hinten) {
+            if (wort.charAt(vorne) != wort.charAt(hinten))
                 return false;
 
-            i++;
-            j--;
+            vorne++;
+            hinten--;
         }
         
         return true;

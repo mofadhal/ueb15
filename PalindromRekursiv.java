@@ -7,17 +7,23 @@
  */
 public class PalindromRekursiv implements Palindrom
 {
+    /**
+     * 
+     * @param wort Das eingegebe Wort .
+     * @return false ,  wenn das eingegebene Wort nicht palindrom ist . 
+     *         true ,  wenn das eingegebene Wort palindrom ist .
+     */
     public boolean istPalindrom(String wort){
-        wort = wort.toLowerCase();
-        int vorne = 0;
-        int hinten = wort.length() - 1;
-        while (vorne < hinten && wort.charAt(vorne) == wort.charAt(hinten))
-        {
-            ++vorne;
-            --hinten;
+        if(wort.length() == 0 || wort.length() == 1){
+            return true; 
         }
-        return vorne >= hinten;
-    }
+
+        if(wort.charAt(0) == wort.charAt(wort.length()-1)){
+            return istPalindrom(wort.substring(1, wort.length()-1));
+        }
+
+        return false;
     
     }
 
+}
