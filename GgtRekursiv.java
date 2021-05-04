@@ -7,7 +7,7 @@
  */
 public class GgtRekursiv implements GgT
 {
-   
+   // almanari
    /**
     * @param a die erste Zahl .
     * @param b die zewite Zahl .
