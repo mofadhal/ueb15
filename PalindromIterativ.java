@@ -14,8 +14,7 @@ public class PalindromIterativ implements Palindrom
      *         false , wenn das eingegebene Wort nicht palindrom ist . 
      */
     public boolean istPalindrom(String wort){
-    
-        
+
         int vorne = 0, hinten = wort.length() - 1;
         while (vorne < hinten) {
             if (wort.charAt(vorne) != wort.charAt(hinten))
